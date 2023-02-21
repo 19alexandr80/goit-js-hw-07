@@ -1,7 +1,7 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-import * as basicLightbox from "./basicLightbox.js";
+// import * as basicLightbox from "./basicLightbox.js";
 const galleryEl = document.querySelector(".gallery");
 const createGallery = galleryItems
   .map(({ preview, original, description }) => {
