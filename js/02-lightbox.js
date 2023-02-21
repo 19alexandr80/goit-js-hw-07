@@ -2,7 +2,7 @@ import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
 console.log(galleryItems);
-import SimpleLightbox from "./simple-lightbox.js";
+// import SimpleLightbox from "./simple-lightbox.js";
 const galleryEl = document.querySelector(".gallery");
 const createGallery = galleryItems
   .map(({ preview, original, description }) => {
