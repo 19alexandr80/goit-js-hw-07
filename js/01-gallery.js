@@ -29,7 +29,6 @@ const onModal = function (e) {
       `);
   instance.show();
   const onClose = function (e) {
-    console.log("kjhgfdas");
     if (e.code === "Escape") {
       instance.close();
       window.removeEventListener("keydown", onClose);
