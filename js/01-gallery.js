@@ -18,6 +18,7 @@ const createGallery = galleryItems
   })
   .join("");
 galleryEl.insertAdjacentHTML("beforeEnd", createGallery);
+
 const onModal = function (e) {
   e.preventDefault();
   if (e.target.nodeName !== "IMG") {
@@ -27,10 +28,14 @@ const onModal = function (e) {
           <img src="${e.target.dataset.source}" width="800" height="600">
       `);
   instance.show();
-  window.addEventListener("keydown", (e) => {
+  const onClose = function (e) {
+    console.log("kjhgfdas");
     if (e.code === "Escape") {
       instance.close();
+      window.removeEventListener("keydown", onClose);
     }
-  });
+  };
+  window.addEventListener("keydown", onClose);
 };
+
 galleryEl.addEventListener("click", onModal);
